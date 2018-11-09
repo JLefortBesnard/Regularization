@@ -40,7 +40,7 @@ acc = []
 for train_index, test_index in kf:
     LinReg.fit(X[train_index, :], Y[train_index])
     acc.append(LinReg.score(X[test_index, :], Y[test_index]))
-print np.mean(acc)
+print(np.mean(acc))
 accuracies = pd.DataFrame(acc,
                     columns = ["LinReg"])
 
@@ -49,7 +49,7 @@ acc = []
 for train_index, test_index in kf:
     Ridge.fit(X[train_index, :], Y[train_index])
     acc.append(Ridge.score(X[test_index, :], Y[test_index]))
-print np.mean(acc)
+print(np.mean(acc))
 accuracies["Ridge"] = acc
 
 kf = cross_validation.KFold(len(Y), n_folds=5)
@@ -57,7 +57,7 @@ acc = []
 for train_index, test_index in kf:
     Lasso.fit(X[train_index, :], Y[train_index])
     acc.append(Lasso.score(X[test_index, :], Y[test_index]))
-print np.mean(acc)
+print(np.mean(acc))
 accuracies["Lasso"] = acc
 acc_stack = accuracies.stack().reset_index()
 del acc_stack["level_0"]
@@ -81,7 +81,7 @@ acc = []
 for train_index, test_index in kf:
     LinReg.fit(X[train_index, :], Y[train_index])
     acc.append(LinReg.score(X[test_index, :], Y[test_index]))
-print np.mean(acc)
+print(np.mean(acc))
 accuracies = pd.DataFrame(acc,
                     columns = ["LinReg"])
                     
@@ -90,14 +90,14 @@ acc = []
 for train_index, test_index in kf:
     Ridge.fit(X[train_index, :], Y[train_index])
     acc.append(Ridge.score(X[test_index, :], Y[test_index]))
-print np.mean(acc)
+print(np.mean(acc))
 accuracies["Ridge"] = acc
 kf = cross_validation.KFold(len(Y), n_folds=5)
 acc = []
 for train_index, test_index in kf:
     Lasso.fit(X[train_index, :], Y[train_index])
     acc.append(Lasso.score(X[test_index, :], Y[test_index]))
-print np.mean(acc)
+print(np.mean(acc))
 accuracies["Lasso"] = acc
 acc_stack = accuracies.stack().reset_index()
 del acc_stack["level_0"]
@@ -120,7 +120,7 @@ acc = []
 for train_index, test_index in kf:
     LinReg.fit(X[train_index, :], Y[train_index])
     acc.append(LinReg.score(X[test_index, :], Y[test_index]))
-print np.mean(acc)
+print(np.mean(acc))
 accuracies = pd.DataFrame(acc,
                     columns = ["LinReg"])
 
@@ -129,14 +129,14 @@ acc = []
 for train_index, test_index in kf:
     Ridge.fit(X[train_index, :], Y[train_index])
     acc.append(Ridge.score(X[test_index, :], Y[test_index]))
-print np.mean(acc)
+print(np.mean(acc))
 accuracies["Ridge"] = acc
 kf = cross_validation.KFold(len(Y), n_folds=5)
 acc = []
 for train_index, test_index in kf:
     Lasso.fit(X[train_index, :], Y[train_index])
     acc.append(Lasso.score(X[test_index, :], Y[test_index]))
-print np.mean(acc)
+print(np.mean(acc))
 accuracies["Lasso"] = acc
 acc_stack = accuracies.stack().reset_index()
 del acc_stack["level_0"]
