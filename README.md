@@ -7,4 +7,5 @@ Show with boxplots the prediction accuracy of Ridge, Lasso, LinearRegression and
 <img src="p=1000.PNG" alt="p=1000" weight="250" height="250">
 
 
-We see that LASSO perform better only when a lot of features are not useful
+We see that LASSO performs better only when a lot of features are not useful, same for linear regression with feature selection.
+As expected feature selection with linear regression performs really badly when all features are important, even when more than half of the variables are noise (though we didn't use grid search in this example). In comparison to linear regression with feature selection, Lasso seems to perform quite well almost all the time.
